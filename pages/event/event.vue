@@ -167,7 +167,7 @@ export default {
 
       modal: {
         buy: false,
-        kefu: true
+        kefu: false
       },
 
       msg: '',

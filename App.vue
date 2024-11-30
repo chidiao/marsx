@@ -1,6 +1,7 @@
 <script>
 import audioManager from '@/utils/audioManager'
 import { wechatLogin, getUserInfo } from '@/apis/user'
+
 export default {
   data() {
     return {}
@@ -64,9 +65,10 @@ export default {
   }
 }
 </script>
+
 <style>
-@import './assets/style/colorui/main.css';
-@import './assets/style/colorui/icon.css';
+@import '@/utils/colorui/main.css';
+@import '@/utils/colorui/icon.css';
 
 .container {
   height: 100%;

@@ -49,7 +49,7 @@
 </template>
 
 <script>
-import { getGoodInfo, createOrder } from '@/apis/mall.js';
+import { getGoodInfo, createOrder } from '@/apis/mall.js'
 export default {
   data() {
     return {
@@ -74,70 +74,66 @@ export default {
 
       msg: '',
       category_name: ''
-    };
+    }
   },
   onLoad(opts) {
-    const { goods_uid } = opts;
+    const { goods_uid } = opts
     this.setData({
       goods_uid
-    });
-    this.getData();
+    })
+    this.getData()
   },
   methods: {
     showModal: function (modalName, params) {
       this.setData({
         [`modal.${modalName}`]: true
-      });
+      })
       if (params?.msg) {
         this.setData({
           msg: params.msg
-        });
+        })
       }
     },
 
     closeModal: function (modalName) {
       if (!modalName) {
-        this.closeAllModal();
+        this.closeAllModal()
       } else {
         this.setData({
           [`modal.${modalName}`]: false
-        });
+        })
       }
     },
-
     closeAllModal: function () {
       this.setData({
         modal: {
           buy: false,
           kefu: false
         }
-      });
+      })
     },
-
     modalClick: function (event) {
-      var type = event.target.dataset.type;
-      var modalName = event.target.dataset.modal;
+      var type = event.target.dataset.type
+      var modalName = event.target.dataset.modal
       if (type == 'close') {
-        this.closeAllModal(modalName);
+        this.closeAllModal(modalName)
       }
     },
-
     async getData() {
-      const { data } = await getGoodInfo(this.goods_uid);
-      const banners = data.info.detail_banner_arr.filter((item) => item.type == 'image');
-      const banner = banners[0];
+      const { data } = await getGoodInfo(this.goods_uid)
+      const banners = data.info.detail_banner_arr.filter((item) => item.type == 'image')
+      const banner = banners[0]
       this.setData({
         good: data.info,
         bannerType: banner?.type,
         bannerUrl: banner?.url
-      });
+      })
     },
-
     async createOrder() {
       if (!this.good.goods_uid) {
-        return;
+        return
       }
-      const good = this.good;
+      const good = this.good
       const info = [
         {
           goods_uid: good.goods_uid,
@@ -145,18 +141,17 @@ export default {
           goods_price: good.current_price,
           goods_name: good.goods_name
         }
-      ];
+      ]
       try {
         const { data } = await createOrder({
           goods_info: info
-        });
-        this.payNow(data.payment_detail);
+        })
+        this.payNow(data.payment_detail)
       } catch {
-        console.log('CatchClause');
-        console.log('CatchClause');
+        console.log('CatchClause')
+        console.log('CatchClause')
       }
     },
-
     async payNow(detail) {
       uni.requestPayment({
         timeStamp: detail.timeStamp + '',
@@ -167,21 +162,20 @@ export default {
         success: (res) => {
           this.showModal('kefu', {
             msg: '购买成功'
-          });
+          })
         },
         fail: (res) => {
           this.showModal('kefu', {
             msg: '支付失败(' + res?.errMsg + ')'
-          });
+          })
         }
-      });
+      })
     },
-
     onTapKefu() {
-      console.log('占位：函数 onTapKefu 未声明');
+      console.log('占位：函数 onTapKefu 未声明')
     }
   }
-};
+}
 </script>
 <style>
 /* pages/merch/detail.wxss */
@@ -203,7 +197,7 @@ export default {
   overflow: hidden;
 }
 
-.container .banner>image {
+.container .banner > image {
   width: 100%;
   height: 100%;
 }

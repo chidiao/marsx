@@ -1,51 +1,36 @@
 <template>
-  <view class="wrapper wrapper-order">
+  <view>
     <no-data v-if="!list[0]"></no-data>
 
-    <scroll-view :scroll-y="true" style="height: 88vh">
-      <view class="cards" v-if="list[0]">
-        <view class="card" v-for="(item, index) in list" :key="index">
-          <view class="info info1">
-            <view>
-              <strong>订单号：</strong>
-              <span>{{ item.order_sn }}</span>
+    <view class="padding-tb-sm" style="width: 100%;" v-if="list[0]">
+      <view class="bg-white padding-sm margin-sm" style="border-radius: 10rpx" v-for="(item, index) in list" :key="index">
+        <view class="flex justify-between align-center text-sm">
+          <view>{{ item.order_sn }}</view>
+          <view>{{ item.pay_status_text }}</view>
+        </view>
+
+        <view class="flex justify-between align-center" style="gap: 20rpx">
+          <view class="flex align-center text-sm margin-tb-xs" style="gap: 20rpx">
+            <view class="padding-sm" style="border-radius: 8rpx; background: rgba(0, 0, 0, 0.1); width: fit-content">
+              <view class="text-xs text-bold flex justify-center align-center" style="width: 60rpx; height: 60rpx">MarsX</view>
             </view>
-            <span v-if="item.pay_status != 20" style="padding: 2px 7px; background-color: #ee0a24; border-radius: 5px; font-size: 14px; word-break: keep-all">
-              {{ item.pay_status_text }}
-            </span>
-            <span v-if="item.pay_status == 20" style="padding: 2px 7px; background-color: #07c160; border-radius: 5px; font-size: 14px; word-break: keep-all">
-              {{ item.pay_status_text }}
-            </span>
+            <view>{{ item.package_text }}</view>
           </view>
 
-          <view class="info">
-            <strong>名称：</strong>
-            {{ item.package_text }}
-          </view>
-
-          <view class="info">
-            <strong>价格：</strong>
-            ￥{{ item.price }}
-          </view>
-
-          <view class="info">
-            <strong>支付方式：</strong>
-            {{ item.pay_type_text }}
-          </view>
-
-          <view class="info">
-            <strong>时间：</strong>
-            {{ item.add_time_text }}
+          <view class="text-right">
+            <view class="text-red text-bold">￥{{ item.price }}</view>
+            <view class="text-xs">{{ item.pay_type_text }}</view>
           </view>
         </view>
       </view>
-    </scroll-view>
+    </view>
   </view>
 </template>
 
 <script>
 import noData from '@/components/no-data/no-data'
-import { getOrderList } from '@/apis/member'
+import { getOrderList } from '@/apis/member.js'
+
 export default {
   components: {
     noData
@@ -55,11 +40,13 @@ export default {
       list: []
     }
   },
-  onLoad() {
+  onShow() {
+    this.list = []
     this.getList()
   },
   methods: {
     async getList() {
+      console.log(getOrderList)
       const { data } = await getOrderList()
       this.setData({
         list: data.list
@@ -68,55 +55,5 @@ export default {
   }
 }
 </script>
-<style>
-.wrapper,
-.wrapper-info {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 1000;
-}
 
-.wrapper-order .cards {
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 30rpx;
-}
-
-.wrapper-order .cards .card {
-  display: block;
-  width: 100%;
-  border-radius: 8px;
-  padding: 15px;
-  background-color: rgba(105, 102, 102, 0.1);
-  margin: 30rpx auto;
-}
-
-.wrapper-order .cards .card .info1 {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.wrapper-order .cards .card .btn {
-  width: 250px;
-  display: flex;
-  justify-content: flex-end;
-  margin: 20px 0;
-}
-
-.empty {
-  font-size: 40rpx;
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  pointer-events: none;
-}
-</style>
+<style></style>

@@ -1,18 +1,17 @@
 const baseUrl = 'https://h5-api.itopline.com/';
+
 const request = (url, method, data, successCallback, failCallback, debug = false) => {
   // const token = wx.getStorageSync("token") || null;
   const token = getApp().globalData.token;
-  if (debug) {
-    console.log('--- http.js debug start ---');
-  }
-  if (debug) {
-    console.table([{
-      url,
-      method,
-      data,
-      token
-    }]);
-  }
+
+  debug && console.log('--- http.js debug start ---')
+  debug && console.table([{
+    url,
+    method,
+    data,
+    token
+  }])
+
   uni.request({
     url: baseUrl + url,
     method: method,
@@ -25,11 +24,11 @@ const request = (url, method, data, successCallback, failCallback, debug = false
       lang: 'zh-cn'
     },
     success(res) {
-      if (debug) {
-        console.info('success:', res);
-      } //登陆状态失效
+      debug && console.info('success:', res)
+
+      //登陆状态失效
       if (res.data?.code == '10001') {
-        return uni.redirectTo({
+        return uni.navigateTo({
           url: '/pages/mine/login'
         });
       }
@@ -46,18 +45,15 @@ const request = (url, method, data, successCallback, failCallback, debug = false
       successCallback(res.data);
     },
     fail(err) {
-      if (debug) {
-        console.info('fail:', err);
-      }
+      debug && console.info('fail:', err)
       failCallback(err);
     },
     complete() {
-      if (debug) {
-        console.log('--- http.js debug end ---');
-      }
+      debug && console.log('--- http.js debug end ---')
     }
   });
 };
+
 const promiseRequest = (url, method, data, debug = false) => {
   return new Promise((resolve, reject) => {
     request(
@@ -76,10 +72,8 @@ const promiseRequest = (url, method, data, debug = false) => {
     );
   });
 };
+
 export default {
-  data() {
-    return {};
-  },
   get: (url, ...args) => promiseRequest(url, 'GET', {}, ...args),
   post: (url, data, ...args) => promiseRequest(url, 'POST', data, ...args)
 };
