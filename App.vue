@@ -10,13 +10,13 @@ export default {
     token: null,
     userInfo: null,
     need_mobile: 0,
-    wx_open_id: '',
-
-    setGlobalData: function (key, value) {
+    wx_open_id: ''
+  },
+  methods: {
+    setGlobalData(key, value) {
       console.info('setGlobalData', key, value)
-      this[key] = value
+      this.globalData[key] = value
     },
-
     userLogin() {
       uni.login({
         success: (res) => {
@@ -28,40 +28,31 @@ export default {
         }
       })
     },
-
     async marsXLogin(code) {
       const { data } = await wechatLogin(code)
-      this.need_mobile = data.need_mobile
-      this.token = data.token
-      this.userInfo = data.user_info
-      this.wx_open_id = data.user_info.wx_open_id
+      this.globalData.need_mobile = data.need_mobile
+      this.globalData.token = data.token
+      this.globalData.userInfo = data.user_info
+      this.globalData.wx_open_id = data.user_info.wx_open_id
     },
-
     marsXLogout() {
-      this.need_mobile = 0
-      this.token = null
-      this.userInfo = null
+      this.globalData.need_mobile = 0
+      this.globalData.token = null
+      this.globalData.userInfo = null
     },
-
-    utils: {
-      formatDate: function (timestamp) {
-        const date = new Date(timestamp)
-        const year = date.getFullYear()
-        const month = date.getMonth() + 1
-        const day = date.getDate()
-        const hour = date.getHours()
-        const minute = date.getMinutes()
-        const second = date.getSeconds()
-        const formattedTime = year + '-' + month + '-' + day + ' ' + hour + ':' + minute + ':' + second
-        return formattedTime
-      }
-    },
-
-    key: ''
+    openKefu() {
+      uni.openCustomerServiceChat({
+        extInfo: {
+          url: 'https://work.weixin.qq.com/kfid/kfce2066ab53e9c7c8c'
+        },
+        corpId: 'wwecca02016493a6cb',
+        success(res) {}
+      })
+    }
   },
   onLaunch() {
     this.audioManager = audioManager
-    this.globalData.userLogin()
+    this.userLogin()
   }
 }
 </script>

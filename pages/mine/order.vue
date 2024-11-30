@@ -48,9 +48,7 @@ export default {
     async getList() {
       console.log(getOrderList)
       const { data } = await getOrderList()
-      this.setData({
-        list: data.list
-      })
+      this.list = data.list
     }
   }
 }

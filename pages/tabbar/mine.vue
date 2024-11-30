@@ -82,12 +82,9 @@ export default {
   },
   methods: {
     refreshData() {
-      this.setData({
-        token: app.globalData.token,
-        userInfo: app.globalData.userInfo
-      })
+      this.token = app.globalData.token
+      this.userInfo = app.globalData.userInfo
     },
-
     toLogin() {
       this.refreshData()
       if (this.userInfo) {
@@ -97,27 +94,18 @@ export default {
         url: '/pages/mine/login'
       })
     },
-
     logout() {
-      app.globalData.marsXLogout()
+      getApp().marsXLogout()
       this.refreshData()
     },
-
     clickItem(event) {
       const { url } = event.currentTarget.dataset
       uni.navigateTo({
         url
       })
     },
-
-    onTapKefu: function () {
-      uni.openCustomerServiceChat({
-        extInfo: {
-          url: 'https://work.weixin.qq.com/kfid/kfce2066ab53e9c7c8c'
-        },
-        corpId: 'wwecca02016493a6cb',
-        success(res) {}
-      })
+    onTapKefu() {
+      getApp().openKefu()
     }
   }
 }

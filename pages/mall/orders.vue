@@ -11,7 +11,11 @@
       <view class="flex justify-between align-center" style="gap: 20rpx">
         <view class="flex align-center text-sm margin-tb-xs" style="gap: 20rpx">
           <view class="padding-sm" style="border-radius: 8rpx; background: rgba(0, 0, 0, 0.1); width: fit-content">
-            <image :src="item.goods_list[0].goods_picture_text" style="width: 100rpx; height: 100rpx" mode="aspectFit" />
+            <image
+              :src="item.goods_list[0].goods_picture_text"
+              style="width: 100rpx; height: 100rpx"
+              mode="aspectFit"
+            />
           </view>
           <view>{{ item.goods_list[0].goods_name }}</view>
         </view>
@@ -55,27 +59,21 @@ export default {
       if (!this.loadMore) {
         return
       }
+
       try {
-        this.setData({
-          loading: true
-        })
+        this.loading = true
         const { data } = await getOrderList({
           page: this.page
         })
         const list = data.order_list
-        this.setData({
-          list: [...this.list, ...list],
-          page: this.page++
-        })
+        this.list = [...this.list, ...list]
+        this.page++
+
         if (list.length < this.page_size) {
-          this.setData({
-            loadMore: false
-          })
+          this.loadMore = false
         }
       } finally {
-        this.setData({
-          loading: false
-        })
+        this.loading = false
       }
     }
   }

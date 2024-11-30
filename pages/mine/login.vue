@@ -1,7 +1,9 @@
 <template>
   <view class="page">
     <view class="padding-xl">
-      <button class="cu-btn bg-red block lg" open-type="getPhoneNumber" @getphonenumber="getPhoneNumber">一键登录</button>
+      <button class="cu-btn bg-red block lg" open-type="getPhoneNumber" @getphonenumber="getPhoneNumber">
+        一键登录
+      </button>
     </view>
   </view>
 </template>
@@ -22,13 +24,10 @@ export default {
   },
   methods: {
     getGlobalData() {
-      this.setData({
-        token: app.globalData.token,
-        userInfo: app.globalData.userInfo,
-        need_mobile: app.globalData.need_mobile
-      })
+      this.token = app.globalData.token
+      this.userInfo = app.globalData.userInfo
+      this.need_mobile = app.globalData.need_mobile
     },
-
     getPhoneNumber(e) {
       const { code } = e.detail
       if (code) {
@@ -40,7 +39,6 @@ export default {
         })
       }
     },
-
     async register(code) {
       try {
         uni.showLoading({
@@ -51,15 +49,14 @@ export default {
           js_code: code,
           wx_open_id: wx_open_id
         })
-        app.globalData.setGlobalData('token', data.token)
-        app.globalData.setGlobalData('userInfo', data.user_info)
-        app.globalData.setGlobalData('need_mobile', data.need_mobile)
+        app.setGlobalData('token', data.token)
+        app.setGlobalData('userInfo', data.user_info)
+        app.setGlobalData('need_mobile', data.need_mobile)
         this.goBack()
       } finally {
         uni.hideLoading()
       }
     },
-
     goBack() {
       const pages = getCurrentPages()
       if (pages.length > 1) {
@@ -75,6 +72,7 @@ export default {
   }
 }
 </script>
+
 <style>
 /* pages/mine/login.wxss */
 </style>

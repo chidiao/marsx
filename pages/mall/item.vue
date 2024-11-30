@@ -41,7 +41,9 @@
 
         <view style="display: flex; align-items: center; gap: 30rpx; padding: 30rpx">
           <button class="cu-btn lg block bg-red" @tap.stop.prevent="onTapKefu">联系客服</button>
-          <button class="cu-btn lg block" data-type="close" data-modal="kefu" @tap.stop.prevent="modalClick">确定</button>
+          <button class="cu-btn lg block" data-type="close" data-modal="kefu" @tap.stop.prevent="modalClick">
+            确定
+          </button>
         </view>
       </view>
     </view>
@@ -77,42 +79,30 @@ export default {
     }
   },
   onLoad(opts) {
-    const { goods_uid } = opts
-    this.setData({
-      goods_uid
-    })
+    this.goods_uid = opts.goods_uid
     this.getData()
   },
   methods: {
-    showModal: function (modalName, params) {
-      this.setData({
-        [`modal.${modalName}`]: true
-      })
+    showModal(modalName, params) {
+      this[`modal.${modalName}`] = true
       if (params?.msg) {
-        this.setData({
-          msg: params.msg
-        })
+        this.msg = params.msg
       }
     },
-
-    closeModal: function (modalName) {
+    closeModal(modalName) {
       if (!modalName) {
         this.closeAllModal()
       } else {
-        this.setData({
-          [`modal.${modalName}`]: false
-        })
+        this[`modal.${modalName}`] = false
       }
     },
-    closeAllModal: function () {
-      this.setData({
-        modal: {
-          buy: false,
-          kefu: false
-        }
-      })
+    closeAllModal() {
+      this.modal = {
+        buy: false,
+        kefu: false
+      }
     },
-    modalClick: function (event) {
+    modalClick(event) {
       var type = event.target.dataset.type
       var modalName = event.target.dataset.modal
       if (type == 'close') {
@@ -123,11 +113,10 @@ export default {
       const { data } = await getGoodInfo(this.goods_uid)
       const banners = data.info.detail_banner_arr.filter((item) => item.type == 'image')
       const banner = banners[0]
-      this.setData({
-        good: data.info,
-        bannerType: banner?.type,
-        bannerUrl: banner?.url
-      })
+
+      this.good = data.info
+      this.bannerType = banner?.type
+      this.bannerUrl = banner?.url
     },
     async createOrder() {
       if (!this.good.goods_uid) {
@@ -148,8 +137,7 @@ export default {
         })
         this.payNow(data.payment_detail)
       } catch {
-        console.log('CatchClause')
-        console.log('CatchClause')
+        //
       }
     },
     async payNow(detail) {
@@ -172,7 +160,7 @@ export default {
       })
     },
     onTapKefu() {
-      console.log('占位：函数 onTapKefu 未声明')
+      getApp().openKefu()
     }
   }
 }

@@ -301,19 +301,13 @@ export default {
         })
       }
     },
-
-    onTapKefu: function () {
-      uni.openCustomerServiceChat({
-        extInfo: {
-          url: 'https://work.weixin.qq.com/kfid/kfce2066ab53e9c7c8c'
-        },
-        corpId: 'wwecca02016493a6cb',
-        success(res) {}
-      })
+    onTapKefu() {
+      getApp().openKefu()
     }
   }
 }
 </script>
+
 <style>
 .page {
   --gray: #808080;
