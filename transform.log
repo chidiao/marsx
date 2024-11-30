@@ -1,0 +1,122 @@
+开始转换……
+小程序路径:  D:/git/mx-we
+搜索到165个文件(含目录)，耗时：35ms
+
+开始分析文件
+分析文件信息完成，共40组数据
+开始转换文件组为vue文件
+转换进度: 1 / 80   fileKey：apis/address
+转换进度: 2 / 80   fileKey：apis/event
+转换进度: 3 / 80   fileKey：apis/http
+转换进度: 4 / 80   fileKey：apis/mall
+转换进度: 5 / 80   fileKey：apis/member
+转换进度: 6 / 80   fileKey：apis/user
+转换进度: 7 / 80   fileKey：app
+转换进度: 8 / 80   fileKey：assets/style/colorui/animation
+转换进度: 9 / 80   fileKey：assets/style/colorui/icon
+转换进度: 10 / 80   fileKey：assets/style/colorui/main
+转换进度: 11 / 80   fileKey：common/ajax
+转换进度: 12 / 80   fileKey：common/crypto-js.min
+转换进度: 13 / 80   fileKey：components/event-item/event-item
+转换进度: 14 / 80   fileKey：components/news-item/news-item
+转换进度: 15 / 80   fileKey：components/no-data/no-data
+转换进度: 16 / 80   fileKey：pages/anonymous/order
+转换进度: 17 / 80   fileKey：pages/concert/concert
+转换进度: 18 / 80   fileKey：pages/concert/detail
+[WARN] 文件 images/sucai6.png 不存在，但仍然对路径进行转换为相对于static目录，运行时需注意！   fileKey: pages/concert/detail
+[WARN] 文件 images/buy.png 不存在，但仍然对路径进行转换为相对于static目录，运行时需注意！   fileKey: pages/concert/detail
+转换进度: 19 / 80   fileKey：pages/concert/list
+转换进度: 20 / 80   fileKey：pages/event/event
+转换进度: 21 / 80   fileKey：pages/home/home
+转换进度: 22 / 80   fileKey：pages/home/pages/h5/h5
+转换进度: 23 / 80   fileKey：pages/home/pages/h5_ag/h5ag
+转换进度: 24 / 80   fileKey：pages/home/pages/order/order
+转换进度: 25 / 80   fileKey：pages/login/login
+转换进度: 26 / 80   fileKey：pages/mall/item
+转换进度: 27 / 80   fileKey：pages/mall/orders
+转换进度: 28 / 80   fileKey：pages/mine/login
+转换进度: 29 / 80   fileKey：pages/mine/order
+转换进度: 30 / 80   fileKey：pages/notice/list
+转换进度: 31 / 80   fileKey：pages/tabbar/data
+转换进度: 32 / 80   fileKey：pages/tabbar/index
+转换进度: 33 / 80   fileKey：pages/tabbar/mall
+转换进度: 34 / 80   fileKey：pages/tabbar/mine
+转换进度: 35 / 80   fileKey：pages/tabbar/teaser
+转换进度: 36 / 80   fileKey：project.config
+转换进度: 37 / 80   fileKey：project.private.config
+转换进度: 38 / 80   fileKey：sitemap
+转换进度: 39 / 80   fileKey：utils/audioManager
+转换进度: 40 / 80   fileKey：utils/util
+开始二次遍历及生成vue文件
+转换进度: 41 / 80   fileKey：apis/address
+转换进度: 42 / 80   fileKey：apis/event
+转换进度: 43 / 80   fileKey：apis/http
+转换进度: 44 / 80   fileKey：apis/mall
+转换进度: 45 / 80   fileKey：apis/member
+转换进度: 46 / 80   fileKey：apis/user
+转换进度: 47 / 80   fileKey：app
+转换进度: 48 / 80   fileKey：assets/style/colorui/animation
+转换进度: 49 / 80   fileKey：assets/style/colorui/icon
+转换进度: 50 / 80   fileKey：assets/style/colorui/main
+转换进度: 51 / 80   fileKey：common/ajax
+转换进度: 52 / 80   fileKey：common/crypto-js.min
+转换进度: 53 / 80   fileKey：components/event-item/event-item
+转换进度: 54 / 80   fileKey：components/news-item/news-item
+转换进度: 55 / 80   fileKey：components/no-data/no-data
+转换进度: 56 / 80   fileKey：pages/anonymous/order
+转换进度: 57 / 80   fileKey：pages/concert/concert
+转换进度: 58 / 80   fileKey：pages/concert/detail
+转换进度: 59 / 80   fileKey：pages/concert/list
+转换进度: 60 / 80   fileKey：pages/event/event
+转换进度: 61 / 80   fileKey：pages/home/home
+转换进度: 62 / 80   fileKey：pages/home/pages/h5/h5
+转换进度: 63 / 80   fileKey：pages/home/pages/h5_ag/h5ag
+转换进度: 64 / 80   fileKey：pages/home/pages/order/order
+转换进度: 65 / 80   fileKey：pages/login/login
+转换进度: 66 / 80   fileKey：pages/mall/item
+转换进度: 67 / 80   fileKey：pages/mall/orders
+转换进度: 68 / 80   fileKey：pages/mine/login
+转换进度: 69 / 80   fileKey：pages/mine/order
+转换进度: 70 / 80   fileKey：pages/notice/list
+转换进度: 71 / 80   fileKey：pages/tabbar/data
+转换进度: 72 / 80   fileKey：pages/tabbar/index
+转换进度: 73 / 80   fileKey：pages/tabbar/mall
+转换进度: 74 / 80   fileKey：pages/tabbar/mine
+转换进度: 75 / 80   fileKey：pages/tabbar/teaser
+转换进度: 76 / 80   fileKey：project.config
+转换进度: 77 / 80   fileKey：project.private.config
+转换进度: 78 / 80   fileKey：sitemap
+转换进度: 79 / 80   fileKey：utils/audioManager
+转换进度: 80 / 80   fileKey：utils/util
+write pages.json success!
+write manifest.json success!
+write main.js success!
+write package.json success!
+
+
+统计信息：
+
+Component数量: 3
+Page数量: 19
+支付api数量: 4
+登录api数量: 3
+chooseMedia数量: 0
+getLocation数量: 0
+getRelationNodes数量: 0
+<ad/>数量: 0
+<map/>数量: 0
+<video/>数量: 5
+Vant组件: ， 数量：0
+
+项目转换完成！
+用时: 9.531s
+工具版本：v2.2.6
+在该小程序项目的同级目录可以看到_uni结尾的项目，即是转换好的uniapp项目，相关日志在该目录里。
+
+使用说明：
+    1.因各种原因，本工具并非100%完美转换！部分语法仍需人工处理！
+    2.工具转换原理及说明文档参考：https://l4rz4zwpx7.k.topthink.com/@kmrvzg72lx/
+    3.如遇运行报错，请添加QQ群(五群：536178289)带图反馈或https://github.com/zhangdaren/miniprogram-to-uniapp提交Issue！
+    4.转换后请查阅_uni目录或_uni-cli目录里的 README.md 和 transform.log
+
+
