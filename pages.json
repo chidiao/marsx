@@ -1,178 +1,172 @@
 {
-	"pages": [
-		{
-			"path": "pages/tabbar/index",
-			"style": {
-				"navigationBarTitleText": "首页"
-			}
-		},
-		{
-			"path": "pages/tabbar/teaser",
-			"style": {
-				"navigationBarTitleText": "预告"
-			}
-		},
-		{
-			"path": "pages/tabbar/mall",
-			"style": {
-				"navigationBarTitleText": "周边商城"
-			}
-		},
-		{
-			"path": "pages/tabbar/mine",
-			"style": {
-				"navigationBarTitleText": "我的",
-				"enablePullDownRefresh": true
-			}
-		},
-		{
-			"path": "pages/login/login",
-			"style": {
-				"navigationStyle": "custom",
-				"disableScroll": true
-			}
-		},
-		{
-			"path": "pages/anonymous/order",
-			"style": {
-				"navigationBarBackgroundColor": "#ededed",
-				"navigationBarTextStyle": "black",
-				"navigationBarTitleText": "订单支付"
-			}
-		},
-		{
-			"path": "pages/event/event",
-			"style": {
-				"navigationBarTitleText": "线上音乐会入场券",
-				"navigationBarBackgroundColor": "#000000",
-				"navigationBarTextStyle": "white"
-			}
-		},
-		{
-			"path": "pages/notice/list",
-			"style": {
-				"navigationBarTitleText": "公告列表"
-			}
-		},
-		{
-			"path": "pages/concert/concert",
-			"style": {
-				"navigationBarTitleText": "此场"
-			}
-		},
-		{
-			"path": "pages/concert/list",
-			"style": {
-				"navigationBarTitleText": "演出列表"
-			}
-		},
-		{
-			"path": "pages/concert/detail",
-			"style": {
-				"navigationBarTitleText": "线上音乐会入场券"
-			}
-		}
-	],
-	"tabBar": {
-		"color": "#000000",
-		"selectedColor": "#ff0000",
-		"list": [
-			{
-				"pagePath": "pages/tabbar/index",
-				"text": "首页",
-				"iconPath": "static/assets/img/tabbar/home.png",
-				"selectedIconPath": "static/assets/img/tabbar/home-active.png"
-			},
-			{
-				"pagePath": "pages/tabbar/teaser",
-				"text": "预告",
-				"iconPath": "static/assets/img/tabbar/coffee.png",
-				"selectedIconPath": "static/assets/img/tabbar/coffee-active.png"
-			},
-			{
-				"pagePath": "pages/tabbar/mall",
-				"text": "周边",
-				"iconPath": "static/assets/img/tabbar/gift.png",
-				"selectedIconPath": "static/assets/img/tabbar/gift-active.png"
-			},
-			{
-				"pagePath": "pages/tabbar/mine",
-				"text": "我的",
-				"iconPath": "static/assets/img/tabbar/mine.png",
-				"selectedIconPath": "static/assets/img/tabbar/mine-active.png"
-			}
-		]
-	},
-	"subPackages": [
-		{
-			"root": "pages/home/",
-			"pages": [
-				{
-					"path": "pages/h5/h5",
-					"name": "homePage",
-					"style": {}
-				},
-				{
-					"path": "pages/h5_ag/h5ag",
-					"name": "homePage",
-					"style": {}
-				},
-				{
-					"path": "home",
-					"name": "homePage",
-					"style": {}
-				}
-			]
-		},
-		{
-			"root": "pages/mall",
-			"pages": [
-				{
-					"path": "item",
-					"style": {
-						"navigationBarTitleText": "商品"
-					}
-				},
-				{
-					"path": "orders",
-					"style": {
-						"navigationBarTitleText": "商城订单"
-					}
-				}
-			]
-		},
-		{
-			"root": "pages/mine",
-			"pages": [
-				{
-					"path": "order",
-					"style": {
-						"navigationBarBackgroundColor": "#fff",
-						"navigationBarTextStyle": "black",
-						"navigationBarTitleText": "我的订单"
-					}
-				},
-				{
-					"path": "login",
-					"style": {
-						"navigationBarTitleText": "登录"
-					}
-				}
-			]
-		}
-	],
-	"style": "v2",
-	"componentFramework": "glass-easel",
-	"sitemapLocation": "sitemap.json",
-	"lazyCodeLoading": "requiredComponents",
-	"resolveAlias": {
-		"@/*": "/*"
-	},
-	"globalStyle": {
-		"disableSwipeBack": true,
-		"pageOrientation": "portrait",
-		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "Weixin",
-		"navigationBarBackgroundColor": "#ffffff"
-	}
+  "pages": [{
+      "path": "pages/tabbar/index",
+      "style": {
+        "navigationBarTitleText": "首页"
+      }
+    },
+    {
+      "path": "pages/tabbar/teaser",
+      "style": {
+        "navigationBarTitleText": "预告"
+      }
+    },
+    {
+      "path": "pages/tabbar/mall",
+      "style": {
+        "navigationBarTitleText": "周边商城"
+      }
+    },
+    {
+      "path": "pages/tabbar/mine",
+      "style": {
+        "navigationBarTitleText": "我的",
+        "enablePullDownRefresh": true
+      }
+    },
+    {
+      "path": "pages/login/login",
+      "style": {
+        "navigationStyle": "custom",
+        "disableScroll": true
+      }
+    },
+    {
+      "path": "pages/anonymous/order",
+      "style": {
+        "navigationBarBackgroundColor": "#ededed",
+        "navigationBarTextStyle": "black",
+        "navigationBarTitleText": "订单支付"
+      }
+    },
+    {
+      "path": "pages/event/event",
+      "style": {
+        "navigationBarTitleText": "线上音乐会入场券",
+        "navigationBarBackgroundColor": "#000000",
+        "navigationBarTextStyle": "white"
+      }
+    },
+    {
+      "path": "pages/notice/list",
+      "style": {
+        "navigationBarTitleText": "公告列表"
+      }
+    },
+    {
+      "path": "pages/concert/concert",
+      "style": {
+        "navigationBarTitleText": "此场"
+      }
+    },
+    {
+      "path": "pages/concert/list",
+      "style": {
+        "navigationBarTitleText": "演出列表"
+      }
+    },
+    {
+      "path": "pages/concert/detail",
+      "style": {
+        "navigationBarTitleText": "线上音乐会入场券"
+      }
+    }
+  ],
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#ff0000",
+    "list": [{
+        "pagePath": "pages/tabbar/index",
+        "text": "首页",
+        "iconPath": "static/assets/img/tabbar/home.png",
+        "selectedIconPath": "static/assets/img/tabbar/home-active.png"
+      },
+      {
+        "pagePath": "pages/tabbar/teaser",
+        "text": "预告",
+        "iconPath": "static/assets/img/tabbar/coffee.png",
+        "selectedIconPath": "static/assets/img/tabbar/coffee-active.png"
+      },
+      {
+        "pagePath": "pages/tabbar/mall",
+        "text": "周边",
+        "iconPath": "static/assets/img/tabbar/gift.png",
+        "selectedIconPath": "static/assets/img/tabbar/gift-active.png"
+      },
+      {
+        "pagePath": "pages/tabbar/mine",
+        "text": "我的",
+        "iconPath": "static/assets/img/tabbar/mine.png",
+        "selectedIconPath": "static/assets/img/tabbar/mine-active.png"
+      }
+    ]
+  },
+  "subPackages": [{
+      "root": "pages/home/",
+      "pages": [{
+          "path": "pages/h5/h5",
+          "name": "homePage",
+          "style": {}
+        },
+        {
+          "path": "pages/h5_ag/h5ag",
+          "name": "homePage",
+          "style": {}
+        },
+        {
+          "path": "home",
+          "name": "homePage",
+          "style": {}
+        }
+      ]
+    },
+    {
+      "root": "pages/mall",
+      "pages": [{
+          "path": "item",
+          "style": {
+            "navigationBarTitleText": "商品"
+          }
+        },
+        {
+          "path": "orders",
+          "style": {
+            "navigationBarTitleText": "商城订单"
+          }
+        }
+      ]
+    },
+    {
+      "root": "pages/mine",
+      "pages": [{
+          "path": "order",
+          "style": {
+            "navigationBarBackgroundColor": "#fff",
+            "navigationBarTextStyle": "black",
+            "navigationBarTitleText": "我的订单"
+          }
+        },
+        {
+          "path": "login",
+          "style": {
+            "navigationBarTitleText": "登录"
+          }
+        }
+      ]
+    }
+  ],
+  "style": "v2",
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents",
+  "resolveAlias": {
+    "@/*": "/*"
+  },
+  "globalStyle": {
+    "disableSwipeBack": true,
+    "pageOrientation": "portrait",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarBackgroundColor": "#ffffff"
+  }
 }
