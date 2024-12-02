@@ -6,7 +6,7 @@
       }
     },
     {
-      "path": "pages/tabbar/teaser",
+      "path": "pages/tabbar/event",
       "style": {
         "navigationBarTitleText": "预告"
       }
@@ -78,26 +78,26 @@
     "list": [{
         "pagePath": "pages/tabbar/index",
         "text": "首页",
-        "iconPath": "static/assets/img/tabbar/home.png",
-        "selectedIconPath": "static/assets/img/tabbar/home-active.png"
+        "iconPath": "static/img/tabbar/home.png",
+        "selectedIconPath": "static/img/tabbar/home-active.png"
       },
       {
-        "pagePath": "pages/tabbar/teaser",
+        "pagePath": "pages/tabbar/event",
         "text": "预告",
-        "iconPath": "static/assets/img/tabbar/coffee.png",
-        "selectedIconPath": "static/assets/img/tabbar/coffee-active.png"
+        "iconPath": "static/img/tabbar/coffee.png",
+        "selectedIconPath": "static/img/tabbar/coffee-active.png"
       },
       {
         "pagePath": "pages/tabbar/mall",
         "text": "周边",
-        "iconPath": "static/assets/img/tabbar/gift.png",
-        "selectedIconPath": "static/assets/img/tabbar/gift-active.png"
+        "iconPath": "static/img/tabbar/gift.png",
+        "selectedIconPath": "static/img/tabbar/gift-active.png"
       },
       {
         "pagePath": "pages/tabbar/mine",
         "text": "我的",
-        "iconPath": "static/assets/img/tabbar/mine.png",
-        "selectedIconPath": "static/assets/img/tabbar/mine-active.png"
+        "iconPath": "static/img/tabbar/mine.png",
+        "selectedIconPath": "static/img/tabbar/mine-active.png"
       }
     ]
   },

@@ -37,19 +37,19 @@
       <view class="item" data-url="/pages/mine/order" @tap.stop.prevent="clickItem">
         <view class="label">我的订单</view>
         <view class="icon">
-          <image src="/static/images/arrow.png" mode="" />
+          <image src="/static/img/arrow.png" mode="" />
         </view>
       </view>
       <view class="item" data-url="/pages/mall/orders" @tap.stop.prevent="clickItem">
         <view class="label">商城订单</view>
         <view class="icon">
-          <image src="/static/images/arrow.png" mode="" />
+          <image src="/static/img/arrow.png" mode="" />
         </view>
       </view>
       <view class="item" @tap.stop.prevent="onTapKefu">
         <view class="label">加入粉丝群</view>
         <view class="icon">
-          <image src="/static/images/arrow.png" mode="" />
+          <image src="/static/img/arrow.png" mode="" />
         </view>
       </view>
     </view>

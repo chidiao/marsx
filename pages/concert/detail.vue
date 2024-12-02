@@ -2,7 +2,7 @@
     <!-- pages/concert/detail.wxml -->
     <view class="container">
         <view class="banner">
-            <image src="/static/images/sucai6.png" mode="" />
+            <image src="/static/img/sucai6.png" mode="" />
         </view>
         <view class="box">
             <rich-text :nodes="detail" />
@@ -12,7 +12,7 @@
             <view class="btn" :data-uid="item.uid" @tap.stop.prevent="btnClick" v-for="(item, index) in show_goods_arr" :key="index">
                 <view class="btn_header" style="justify-content: space-between">
                     <view class="btn_header">
-                        <image src="/static/images/buy.png" style="width: 30rpx" mode="widthFix" />
+                        <image src="/static/img/buy.png" style="width: 30rpx" mode="widthFix" />
                         <view>{{ item.category_name }}</view>
                     </view>
 

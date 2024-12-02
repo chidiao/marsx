@@ -2,30 +2,30 @@
     <!-- pages/concert/concert.wxml -->
     <view class="container">
         <view class="banner">
-            <image src="/static/images/sucai2.jpg" mode="" />
+            <image src="/static/img/sucai2.jpg" mode="" />
             <view class="badge">
-                <image src="/static/images/star_black.png" mode="" />
+                <image src="/static/img/star_black.png" mode="" />
                 Trending
-                <image src="/static/images/star_black.png" mode="" />
+                <image src="/static/img/star_black.png" mode="" />
             </view>
         </view>
         <view class="box">
             <view class="title underline">直火帮爬墙少年五周年虚拟演唱会</view>
             <view class="info">
                 <view class="item">
-                    <image class="icon" src="/static/images/time.png" mode="" />
+                    <image class="icon" src="/static/img/time.png" mode="" />
                     时间：2023年7月10日 09:00pm
                 </view>
                 <view class="item">
-                    <image class="icon" src="/static/images/location.png" mode="" />
+                    <image class="icon" src="/static/img/location.png" mode="" />
                     地点：世界上任何有网络的地方
                 </view>
                 <view class="item">
-                    <image class="icon" src="/static/images/location.png" mode="" />
+                    <image class="icon" src="/static/img/location.png" mode="" />
                     入口：此场电脑客户端
                 </view>
                 <view class="item">
-                    <image class="icon" src="/static/images/people.png" mode="" />
+                    <image class="icon" src="/static/img/people.png" mode="" />
                     演出阵容：直火帮 Straight Fire Gang
                 </view>
             </view>

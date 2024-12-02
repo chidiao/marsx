@@ -22,7 +22,7 @@
       >
         <view class="btn_header" style="justify-content: space-between">
           <view class="btn_header">
-            <image src="/static/assets/img/buy.png" style="width: 30rpx" mode="widthFix" />
+            <image src="/static/img/buy.png" style="width: 30rpx" mode="widthFix" />
             <view>{{ item.category_name }}</view>
           </view>
 
@@ -90,7 +90,7 @@
         "
         @tap.stop.prevent="onTapKefu"
       >
-        <image src="/static/assets/img/kefu.png" mode="widthFix" style="width: 50rpx" />
+        <image src="/static/img/kefu.png" mode="widthFix" style="width: 50rpx" />
         <view>客服</view>
       </view>
       <button class="cu-btn bg-red block lg" style="width: 100%" @tap.stop.prevent="btnClick">

@@ -5,14 +5,14 @@
             <view class="item" @tap="toDetail">
                 <view class="item-box">
                     <view class="left">
-                        <image src="/static/images/sucai5.png" mode="" />
+                        <image src="/static/img/sucai5.png" mode="" />
                         <view class="badge">
-                            <image src="/static/images/star.png" mode="" />
+                            <image src="/static/img/star.png" mode="" />
                             <text>
                                 <text>5.7</text>
                                 折起
                             </text>
-                            <image src="/static/images/star.png" mode="" />
+                            <image src="/static/img/star.png" mode="" />
                         </view>
                         <view class="label">舞蹈芭蕾</view>
                     </view>
@@ -34,14 +34,14 @@
             <view class="item" @tap="toDetail">
                 <view class="item-box">
                     <view class="left">
-                        <image src="/static/images/sucai5.png" mode="" />
+                        <image src="/static/img/sucai5.png" mode="" />
                         <view class="badge">
-                            <image src="/static/images/star.png" mode="" />
+                            <image src="/static/img/star.png" mode="" />
                             <text>
                                 <text>5.7</text>
                                 折起
                             </text>
-                            <image src="/static/images/star.png" mode="" />
+                            <image src="/static/img/star.png" mode="" />
                         </view>
                         <view class="label">舞蹈芭蕾</view>
                     </view>

@@ -5,7 +5,7 @@
             <view class="item item2" @tap="toDetail">
                 <view class="item-box">
                     <view class="left">
-                        <image src="/static/images/sucai5.png" mode="" />
+                        <image src="/static/img/sucai5.png" mode="" />
                     </view>
                     <view class="right">
                         <view class="title">重要！！！泰勒斯威夫特-2025线上演唱会延期通知</view>
@@ -18,7 +18,7 @@
             <view class="item item2" @tap="toDetail">
                 <view class="item-box">
                     <view class="left">
-                        <image src="/static/images/sucai5.png" mode="" />
+                        <image src="/static/img/sucai5.png" mode="" />
                     </view>
                     <view class="right">
                         <view class="title">重要！！！泰勒斯威夫特-2025线上演唱会延期通知</view>

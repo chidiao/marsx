@@ -3,7 +3,7 @@
     <swiper class="swiper" :indicator-dots="true" circular indicator-active-color="#E33187">
       <swiper-item v-for="(item, index) in 3" :key="index">
         <view class="swiper-item">
-          <image src="/static/images/sucai4.png" mode="" />
+          <image src="/static/img/sucai4.png" mode="" />
         </view>
       </swiper-item>
     </swiper>

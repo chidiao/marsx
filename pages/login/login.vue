@@ -7,7 +7,7 @@
   >
     <view class="wrapper-info" v-if="show_info == 'info'">
       <view class="title-big">我的资料</view>
-      <image class="close-icon" @tap="onTapClose" src="/static/pages/login/images/close.png" />
+      <image class="close-icon" @tap="onTapClose" src="/static/img/login/close.png" />
       <view class="card">
         <image class="avatar" src="https://h5-api.itopline.com/storage/default/avatar.png" />
         <view class="info">
@@ -30,7 +30,7 @@
 
     <view class="wrapper wrapper-order" v-if="show_info == 'order'">
       <view class="title-big">我的订单</view>
-      <image class="close-icon" @tap="onTapClose" src="/static/pages/login/images/close.png" />
+      <image class="close-icon" @tap="onTapClose" src="/static/img/login/close.png" />
       <view class="empty text" v-if="!orderData[0]">暂无数据</view>
       <scroll-view :scroll-y="true" style="height: 72vh">
         <view class="cards" v-if="orderData[0]">
@@ -178,7 +178,7 @@
 
     <view class="con">
       <view class="title">
-        <image class="img" src="/static/pages/login/images/logo.png" />
+        <image class="img" src="/static/img/login/logo.png" />
       </view>
       <view class="avatar-box" @tap.stop.prevent="onTapToogleMenu" v-if="show_user">
         <image class="avatar" src="https://h5-api.itopline.com/storage/default/avatar.png" />
@@ -198,7 +198,7 @@
       <view v-if="show_login_btn && platform == 'android' && show_user" class="btn btn2" @tap.stop.prevent="onTapLogin"
         >用户权益</view
       >
-      <image class="arrow-icon" src="/static/images/arrow.png" />
+      <image class="arrow-icon" src="/static/img/arrow.png" />
 
       <view class="login-box" v-if="show_login_box && !show_user">
         <view class="agreement-label">
@@ -229,7 +229,7 @@
     <view class="wrapper-goods" v-if="show_user && packageData && platform == 'android' && show_info == 'goods'">
       <view style="display: flex; align-items: center; justify-content: space-between">
         <view style="font-size: 16px; font-weight: 500; padding: 10px 0px">选择商品</view>
-        <image class="goods-close-icon" @tap="onTapClose" src="/static/pages/login/images/close.png" />
+        <image class="goods-close-icon" @tap="onTapClose" src="/static/img/login/close.png" />
       </view>
       <view class="cards">
         <view class="card" v-for="(item, index) in packageData" :key="index">

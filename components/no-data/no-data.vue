@@ -1,6 +1,6 @@
 <template>
     <view class="no-data">
-        <image src="/static/assets/img/no-data.png" mode="widthFix" />
+        <image src="/static/img/no-data.png" mode="widthFix" />
         <view>{{ msg ? msg : '暂无记录' }}</view>
     </view>
 </template>
