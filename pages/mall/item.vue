@@ -26,9 +26,10 @@
         </view>
       </view>
 
-      <view class="foot">
+      <view class="footer">
         <view class="left">合计：{{ good.current_price }}</view>
-        <view class="btn" @tap.stop.prevent="createOrder">立即购买</view>
+        <view class="cu-btn round bg-blue" v-if="good.status == 1" @click="createOrder">立即购买</view>
+        <view class="cu-btn round bg-red" v-else> 不可购买 </view>
       </view>
     </view>
 
@@ -56,7 +57,6 @@ export default {
   data() {
     return {
       goods_uid: '',
-
       good: {
         cover_text: '',
         goods_name: '',
@@ -66,14 +66,11 @@ export default {
         service_after_sale: '',
         current_price: ''
       },
-
       bannerType: '',
       bannerUrl: '',
-
       modal: {
         kefu: false
       },
-
       msg: '',
       category_name: ''
     }
@@ -165,8 +162,8 @@ export default {
   }
 }
 </script>
+
 <style>
-/* pages/merch/detail.wxss */
 .container {
   padding: 32rpx;
   padding-bottom: 152rpx;
@@ -231,7 +228,7 @@ export default {
   line-height: 36rpx;
 }
 
-.container .foot {
+.footer {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -239,27 +236,16 @@ export default {
   height: 120rpx;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
   gap: 60rpx;
   padding: 0 32rpx;
   box-sizing: border-box;
   background-color: #fff;
+  box-shadow: 0 0 4rpx rgba(0, 0, 0, 0.2);
 }
 
-.container .foot .left {
-  font-size: 40rpx;
+.footer .left {
+  font-size: 32rpx;
   font-weight: bold;
-}
-
-.container .foot .btn {
-  flex: 1;
-  background-color: #8200ff;
-  color: #fff;
-  height: 88rpx;
-  border-radius: 1000rpx;
-  text-align: center;
-  line-height: 88rpx;
-  font-weight: bold;
-  user-select: none;
 }
 </style>

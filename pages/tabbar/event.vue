@@ -1,13 +1,5 @@
 <template>
   <view class="padding">
-    <swiper class="swiper" :indicator-dots="true" circular indicator-active-color="#D2FA00">
-      <swiper-item v-for="(item, index) in 3" :key="index">
-        <view class="swiper-item">
-          <image src="/static/img/sucai.jpg" mode="" />
-        </view>
-      </swiper-item>
-    </swiper>
-
     <view class="event-item">
       <image :src="event.poster_text" mode="widthFix" />
 
@@ -56,24 +48,7 @@ page {
   background-color: #fff;
 }
 
-.swiper {
-  width: 100%;
-  border-radius: 20rpx;
-  overflow: hidden;
-  height: 560rpx;
-}
-
-.swiper .swiper-item {
-  height: 100%;
-}
-
-.swiper .swiper-item image {
-  width: 100%;
-  height: 100%;
-}
-
 .event-item {
-  margin-top: 64rpx;
   border-radius: 20rpx;
   overflow: hidden;
   position: relative;

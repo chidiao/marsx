@@ -1,9 +1,9 @@
 <template>
   <view class="container">
     <swiper class="swiper" :indicator-dots="true" circular indicator-active-color="#E33187">
-      <swiper-item v-for="(item, index) in 3" :key="index">
+      <swiper-item v-for="(item, index) in banners" :key="index">
         <view class="swiper-item">
-          <image src="/static/img/sucai4.png" mode="" />
+          <image :src="item.resource_text" mode="aspectFill" />
         </view>
       </swiper-item>
     </swiper>
@@ -27,31 +27,32 @@
 </template>
 
 <script>
-import eventItem from '@/components/event-item/event-item'
-import newsItem from '@/components/news-item/news-item'
+import { getHomeBanner } from '@/apis/common.js'
 import { getEventInfo } from '@/apis/event.js'
 import { news } from './data.js'
 export default {
-  components: {
-    eventItem,
-    newsItem
-  },
   data() {
     return {
       event: {
         show_goods_arr: ''
       },
+      banners: [],
       news
     }
   },
   onLoad() {
     this.getList()
+    this.getBanner()
     this.getNews()
   },
   methods: {
     async getList() {
       const { data } = await getEventInfo()
       this.event = data.info
+    },
+    async getBanner() {
+      const { data } = await getHomeBanner()
+      this.banners = data.list
     },
     getNews() {
       //
@@ -92,6 +93,7 @@ export default {
 
 .swiper .swiper-item {
   height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .swiper .swiper-item image {
